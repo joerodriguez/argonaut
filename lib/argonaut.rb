@@ -32,7 +32,7 @@ class Argonaut
 
   def respond_to?(method) true end
   def to_xml(options = {}) @hash.to_xml(options) end
-  def to_json() @hash.to_json end
+  def to_json(opts={}) @hash.to_json(opts) end
   def to_s() @hash.to_s end
   def inspect() @hash.inspect end
 end
