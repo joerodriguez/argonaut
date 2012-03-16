@@ -1,6 +1,6 @@
 require 'json'
 class Argonaut
-  instance_methods.each {|m| undef_method(m) unless %w(__id__ __send__ to_json to_xml instance_eval nil? is_a? class ===).include?(m.to_s)}
+  instance_methods.each {|m| undef_method(m) unless %w(__id__ __send__ to_json to_xml instance_eval nil? is_a? class ==).include?(m.to_s)}
 
   def initialize(&blk)
     @hash = {}
