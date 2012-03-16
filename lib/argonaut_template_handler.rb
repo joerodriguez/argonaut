@@ -9,7 +9,7 @@ module ActionView
       def self.line_offset() 2 end
 
       def compile(template) %{
-        doc = ::Argonaut.new do |doc|
+        ::Argonaut.new do |doc|
           #{template.source}
         end.to_#{template.format} #{":root => 'response'" if template.format == 'xml'}
       } end
